@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmita’s CSS Showcase</title>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* UNIVERSAL SELECTOR */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* ELEMENT SELECTOR */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 30px;
+            background: linear-gradient(to right, #fceabb, #f8b500);
+        }
+
+        /* ID SELECTOR */
+        #title {
+            color: #2c3e50;
+            text-align: center;
+            text-shadow: 2px 2px 5px #fff;
+        }
+
+        /* CLASS SELECTOR */
+        .highlight {
+            color: darkred;
+            font-weight: bold;
+        }
+
+        /* DESCENDANT SELECTOR */
+        div p {
+            font-size: 18px;
+        }
+
+        /* Background with gradient */
+        .gradient-box {
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            padding: 20px;
+            color: white;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* CSS Animation */
+        @keyframes slide {
+            0% { transform: translateX(0); background-color: #ff9a9e; }
+            50% { transform: translateX(100px); background-color: #fad0c4; }
+            100% { transform: translateX(0); background-color: #ff9a9e; }
+        }
+
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background-color: #ff9a9e;
+            margin: 20px 0;
+            border-radius: 10px;
+            animation: slide 3s infinite;
+        }
+
+        /* Typography */
+        h2 {
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Text decoration, shadow, and indent */
+        .text-effects {
+            text-decoration: underline wavy blue;
+            text-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+            text-indent: 30px;
+        }
+
+        /* Box shadow */
+        .box {
+            background: white;
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+            text-align: center;
+            line-height: 100px;
+        }
+
+        /* Transformations */
+        .transform-box:hover {
+            transform: rotate(10deg) scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Links states */
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: green;
+        }
+
+        /* Buttons */
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        button:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        input:focus {
+            border: 2px solid #ff6347;
+            outline: none;
+        }
+
+        /* Box model demo */
+        .box-model {
+            width: 200px;
+            padding: 20px;
+            margin: 20px;
+            border: 5px solid black;
+            background-color: #ecf0f1;
+        }
+
+        /* Float example */
+        .float-left {
+            float: left;
+            width: 45%;
+            background: #d1f7c4;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .float-right {
+            float: right;
+            width: 45%;
+            background: #f8c291;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Precise positioning */
+        .position-box {
+            position: relative;
+            width: 300px;
+            height: 150px;
+            background: #ffeaa7;
+            margin-top: 50px;
+        }
+
+        .position-box div {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #0984e3;
+            top: 50px;
+            left: 100px;
+        }
+
+        /* Opacity */
+        .opacity-demo {
+            background: #6c5ce7;
+            color: white;
+            padding: 20px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">Asmita’s CSS Demonstration</h1>
+
+    <!-- Inline CSS example -->
+    <p style="color: darkblue; background-color: lightyellow; padding: 10px;">
+        This paragraph uses <b>inline CSS</b> to style directly within the tag.
+    </p>
+
+    <div>
+        <p class="highlight">This paragraph is styled using internal CSS with a class selector.</p>
+    </div>
+
+    <div class="gradient-box">
+        This box has a CSS gradient background!
+    </div>
+
+    <div class="animated-box"></div>
+
+    <h2>Typography & Text Effects</h2>
+    <p class="text-effects">This text has decoration, shadow, and indentation applied through CSS.</p>
+
+    <div class="box transform-box">Hover Me!</div>
+
+    <a href="#">Hover and click on this link</a>
+
+    <br><br>
+    <button>Active Button</button>
+    <button disabled>Disabled Button</button>
+    <br><br>
+
+    <label for="name">Focus Example:</label>
+    <input type="text" id="name" placeholder="Click me to focus">
+
+    <div class="box-model">
+        This box demonstrates the CSS Box Model — margin, border, padding, and content.
+    </div>
+
+    <div class="float-left">Floated Left</div>
+    <div class="float-right">Floated Right</div>
+    <div style="clear: both;"></div>
+
+    <div class="position-box">
+        This is the parent box.
+        <div></div>
+    </div>
+
+    <div class="opacity-demo">
+        This box demonstrates the opacity property.
+    </div>
+
+</body>
+</html>
